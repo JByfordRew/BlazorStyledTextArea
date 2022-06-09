@@ -1,0 +1,29 @@
+﻿@using DemoComponentUse.Data
+
+<style>
+    .my-yellow { 
+        background-color: yellow; 
+    }
+</style>
+
+<StyledTextArea @bind-Value=text StyleRules=styleRules OnElementClicked=MyElementClicked></StyledTextArea>
+<pre>@interactionMessage</pre>
+
+@code {
+    private string text = StyledTextArea.PrepareText(
+        @"Html template can also be styled and remain clickable
+here is the github.com clickable styled element, it should be bold and rounded yellow");
+
+    private List<StyleRule> styleRules = new List<StyleRule>()
+    {
+        StyleRule.Words("github.com", "my-yellow rounded")
+            .HtmlTemplate($"<a href='https://www.github.com' target='_blank'>{StyleRule.MatchMarker}</a>")
+            .WithId("link"),
+        StyleRule.Text("hub", "bold")
+    };
+
+    private string interactionMessage = "";
+
+    private void MyElementClicked(Element element) => interactionMessage = $"Element with Id '{element.Id}' and text '{element.Text}' was clicked.";
+}
+

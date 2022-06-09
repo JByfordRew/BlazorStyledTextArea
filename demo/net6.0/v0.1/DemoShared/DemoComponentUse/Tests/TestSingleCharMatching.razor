@@ -1,0 +1,15 @@
+﻿<StyledTextArea @bind-Value=text StyleRules=styleRules rows="1"></StyledTextArea>
+
+@code {
+    private string text = StyledTextArea.PrepareText(
+        @"Single character matching a, b, c
+Also sequences of single charachters aaa bbb, ccc");
+
+    private List<StyleRule> styleRules = new List<StyleRule>()
+    {
+        StyleRule.Text("a", "bold"),
+        StyleRule.Text("b", "italic"),
+        StyleRule.Text("c", "underline"),
+    };
+}
+

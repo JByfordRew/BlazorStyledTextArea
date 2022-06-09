@@ -1,0 +1,135 @@
+﻿.textarea-container {
+    display: grid;
+    word-break: break-all;
+}
+
+::deep .just-content {
+    resize: none;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    -webkit-font-smoothing: antialiased;
+    background-color: transparent;
+    word-break: break-word;
+    white-space: pre-wrap;
+    padding: 0px;
+}
+
+::deep .overlayed {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+::deep .hidden-text {
+    -webkit-text-fill-color: transparent;
+}
+
+::deep .hidden-caret {
+    color: transparent;
+    text-shadow: 0 0 0;
+}
+
+::deep .caret {
+	position: relative;
+}
+
+::deep .caret i {
+	position: absolute;
+	width: 1.25px;
+	height: 100%;
+	background-color: black;
+	top: 0%;
+	animation-name: blink;
+	animation-duration: 1050ms;
+	animation-iteration-count: infinite;
+	opacity: 1;
+    visibility: visible;
+}
+
+@keyframes blink {
+	0% { opacity: 1; }
+    10% { opacity: 1; }
+    20% { opacity: 1; }
+    30% { opacity: 1; }
+    40% { opacity: 1; }
+    50% { opacity: 0; }
+    60% { opacity: 0; }
+    70% { opacity: 0; }
+    80% { opacity: 0; }
+    90% { opacity: 0; }	    	
+    100% { opacity: 1; }	  
+}
+
+::deep .no-interaction {
+    pointer-events: none;
+}
+
+::deep span {
+    white-space: pre-wrap;
+}
+
+::deep .p { /*hand pointer*/
+    cursor: pointer;
+}
+
+::deep .x { /*interaction*/
+    pointer-events: auto;
+}
+
+::deep span.b, span.bold { 
+    text-shadow: 0.75px 0px 0px;
+}
+
+::deep span.b:hover, span.bold:hover { 
+    color:red;
+}
+
+::deep span.o, span.rounded { 
+    border-radius: 0.2em;
+}
+
+::deep span.u, span.underline { 
+    text-decoration: underline;
+}
+
+::deep span.s, span.strikethrough {
+    text-decoration: line-through;
+}
+
+::deep span.r, span.replace { 
+    color: transparent;
+    position: relative;
+}
+
+::deep span.r:after, span.replace:after { 
+    pointer-events: none;
+    content: attr(data-v);
+    color: initial; 
+    position: absolute;
+    left: 0px; 
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+::deep span.i, span.italic {
+    font-style: italic;
+    letter-spacing: -0.000em; /*NOTE used to be -0.01em now does not have an effect*/
+}
+
+/*::deep span.i, span.italic { 
+    color: transparent;
+    position: relative;
+}
+
+::deep span.i:after, span.italic:after {
+    pointer-events: none;
+    font-style: italic;
+    letter-spacing: -0.01em;
+    content: attr(data-v);
+    color: initial;
+    position: absolute;
+    left: 0px;
+    white-space: nowrap;
+}*/

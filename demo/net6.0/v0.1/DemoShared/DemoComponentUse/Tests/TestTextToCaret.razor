@@ -1,0 +1,12 @@
+﻿<StyledTextArea @bind-Value=text OnCaretChanged=MyOnCaretChange rows="1"></StyledTextArea>
+<pre>Word text to caret : [@caretData?.WordTextToCaret]</pre>
+
+@code {
+    private string text = StyledTextArea.PrepareText(
+        @"Make sure text to caret is correct.
+Try refreshing page and click in various parts of the text.");
+
+    private CaretData? caretData { get; set; }
+    private void MyOnCaretChange(CaretData caretData) =>  this.caretData = caretData;
+}
+

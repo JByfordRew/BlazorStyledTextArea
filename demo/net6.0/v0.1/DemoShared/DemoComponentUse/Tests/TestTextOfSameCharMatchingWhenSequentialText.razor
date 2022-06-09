@@ -1,0 +1,13 @@
+﻿<StyledTextArea @bind-Value=text StyleRules=styleRules rows="1"></StyledTextArea>
+
+@code {
+    private string text = StyledTextArea.PrepareText(
+        @"Matches on text of the same char should style and allow editing without losing or getting extra chars. Whole words should not dissapear on backspace.
+Matched text is @@. Example text is 1x@ 2x@@ 3x@@@ 4x@@@@ 5x@@@@@ 6x@@@@@@ word 5x@@@@@ end.");
+
+    private List<StyleRule> styleRules = new List<StyleRule>()
+    {
+        StyleRule.Text("@@", "bold")
+    };
+}
+
