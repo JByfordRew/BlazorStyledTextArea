@@ -1,4 +1,4 @@
-name: Publish Packages
+name: Publish demo to gh pages
 
 on:
   push:
@@ -15,7 +15,7 @@ jobs:
       uses: actions/setup-dotnet@v1 
       with:
         dotnet-version: 6.0.x 
-        
+
     - name: disable AOT compilation
       run: sed -i 's/<RunAOTCompilation>true/<RunAOTCompilation>false/g' demo/net6.0/v0.1/BlazorStyledTextAreaDemoWasm/Client/BlazorStyledTextAreaDemoWasm.Client.csproj
   
