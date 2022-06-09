@@ -22,6 +22,17 @@ It does not provide the full support of markup editing and user interaction that
 * Typeahead ability
 * Caret data exposed
 
+## Installation
+Latest version in here:  [![NuGet](https://img.shields.io/nuget/v/BlazorStyledTextArea.svg)](https://www.nuget.org/packages/BlazorStyledTextArea/)
+
+```
+Install-Package BlazorStyledTextArea
+```
+or 
+```
+dotnet add package BlazorStyledTextArea
+```
+
 ## The API
 ```html
 <StyledTextArea
