@@ -1,6 +1,9 @@
 # BlazorStyledTextArea
 A textarea with style!
 
+### Important
+As an early adopter use only for own projects where you are happy to provide feedback and improve this component, resolving any early use issues.  Please do not use for company or enterprise applications until this has been shared and used by a good sample of developers.
+
 ## What it does?
 This component essentially remains and works as a textarea but can have any of the text styled based on your application needs.  Its simplicity is purposefully designed to avoid the complexities and issues that come with rich text editors. 
 
