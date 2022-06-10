@@ -13,6 +13,8 @@ It does not provide the full support of markup editing and user interaction that
 
 ![Demo](demo/assets/BlazorStyledTextAreaMainDemo.gif)
 
+[Online Demo](https://salmon-grass-0281f5503.1.azurestaticapps.net/)
+
 ## Feature Summary
 * Simple to use 
 * Composable rules
