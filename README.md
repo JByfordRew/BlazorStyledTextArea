@@ -579,4 +579,4 @@ Your razor file.
 * Version 1.0.0 - initial release .NET 6 component.
 
 ## Roadmap
-* None planned
+* Known Issue: fix inline typeahead vertical positioning. 
