@@ -268,7 +268,7 @@ Your razor file.
         await Task.CompletedTask;
     }
 
-    //this is you app logic to parse the text to create rules about text styling
+    //this is your app logic to parse the text to create rules about text styling
     private List<StyleRule> TransientStyleRules(string line, int index, IEnumerable<String> expiredRuleTypes)
     {
         var firstParse = !expiredRuleTypes.Any();
