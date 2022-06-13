@@ -122,9 +122,10 @@ export function getElementPosition(componentId, id) {
     if (el) {
         let bodyRect = document.body.getBoundingClientRect();
         let elemRect = el.getBoundingClientRect();
-        let top = Math.round(elemRect.top - bodyRect.top);
-        let left = Math.round(elemRect.left - bodyRect.left);
+        let top = elemRect.top - bodyRect.top;
+        let left = elemRect.left - bodyRect.left;
         return [left, top];
+
     }
     return [0, 0];
 }

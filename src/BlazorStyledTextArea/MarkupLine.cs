@@ -6,7 +6,7 @@ namespace BlazorStyledTextArea;
 public class MarkupLine
 {
     public const string CursorElementId = $"{nameof(BlazorStyledTextArea)}Caret";
-    public const string CursorPlaceholder = $"<span class='caret' style='visibility: hidden;'><i id='{CursorElementId}'></i></span>";
+    public const string CursorPlaceholder = $"<span class='caret' style='visibility: hidden;' id='{CursorElementId}'><i></i></span>";
 
     public Guid Id { get; private set; }
     public string Text { get; private set; }
