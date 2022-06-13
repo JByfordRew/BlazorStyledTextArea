@@ -125,7 +125,6 @@ export function getElementPosition(componentId, id) {
         let top = elemRect.top - bodyRect.top;
         let left = elemRect.left - bodyRect.left;
         return [left, top];
-
     }
     return [0, 0];
 }

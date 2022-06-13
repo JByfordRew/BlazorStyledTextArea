@@ -75,6 +75,7 @@ dotnet add package BlazorStyledTextArea
 * `InsertText` - adds text after caret position (caret moved to end of insert).
 * `ReplaceWord` - replaces word currently typed to caret position (caret moved to end of replacement).
 * `Refresh` - manually trigger a render.
+* `class` and `style` - normal attributes but can be used to provide styling of the textarea for consistent operation.  Use if UI of StyledTextArea is not behaving as expected (prefer `class` over `style`). 
 
 #### The `StyleRule`
 StyleRule has a number of composable methods to apply CSS styles to matched text. Each line of text is processed by these rules. 
@@ -576,8 +577,9 @@ Your razor file.
 * Not consuming blazor components when rendering template html. 
 
 ## Version History
+* Version 0.9.1 - fix typeahead positioning. 
 * Version 0.9.0 - initial release .NET 6 component.
 
 ## Roadmap
-* Known issue: fix inline typeahead vertical positioning. 
 * Known issue: fix typeahead on mobile
+* Known issue: custom typeahead selector needs to know position at start of currently typed word as an option to position the dropdown selector at the start of the word being typed.  Currently caret position is where the caret is.
