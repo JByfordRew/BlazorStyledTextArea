@@ -576,7 +576,8 @@ Your razor file.
 * Not consuming blazor components when rendering template html. 
 
 ## Version History
-* Version 1.0.0 - initial release .NET 6 component.
+* Version 0.9.0 - initial release .NET 6 component.
 
 ## Roadmap
-* Known Issue: fix inline typeahead vertical positioning. 
+* Known issue: fix inline typeahead vertical positioning. 
+* Known issue: fix typeahead on mobile
