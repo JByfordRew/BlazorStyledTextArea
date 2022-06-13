@@ -5,7 +5,7 @@ namespace BlazorStyledTextArea;
 
 public partial class StyledTextArea : ComponentBase
 {
-    private string textareaClass => $"just-content overlayed hidden-text {HiddenCaretCssClass}";
+    private string textareaClass => $"just-content overlayed hidden-text {HiddenCaretCssClass} {classAttributeValue}";
 
     private readonly Guid id = Guid.NewGuid();
 
@@ -18,6 +18,8 @@ public partial class StyledTextArea : ComponentBase
 
     private string eventCallbackName = "";
     private EventCallback<string> eventCallback;
+    private string classAttributeValue = "";
+    private string styleAttributeValue = "";
 
     [Parameter(CaptureUnmatchedValues = true)]
     public IDictionary<string, object>? AdditionalAttributes {
@@ -37,6 +39,17 @@ public partial class StyledTextArea : ComponentBase
             }
 
             additionalAttributes = value;
+
+            if (value.ContainsKey("class"))
+            {
+                classAttributeValue = (string)value["class"];
+                value.Remove("class");
+            }
+
+            if (value.ContainsKey("style"))
+            {
+                styleAttributeValue = (string)value["style"];
+            }
         }
     }
 

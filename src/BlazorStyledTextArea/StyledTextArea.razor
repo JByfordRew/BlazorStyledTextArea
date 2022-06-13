@@ -1,7 +1,7 @@
 ﻿@using BlazorTextarea
 <div id="@id" class='textarea-container @(isEditing ? "blazor-styled-textarea-focus" : "blazor-styled-textarea")'>
     @if (isEditing || hasSelection) {
-    <div class="just-content overlayed no-interaction">
+    <div class="just-content overlayed no-interaction @classAttributeValue" style="@styleAttributeValue">
         @for (int i = 0; i < markupLines.Count; i++) {
             <span @key="markupLines[i].Id">@GetMarkup(i)</span><br /> 
         }
@@ -40,7 +40,7 @@
         </Textarea>
     }
     @if (!isEditing && !hasSelection) {
-    <div class="just-content overlayed no-interaction">
+    <div class="just-content overlayed no-interaction @classAttributeValue" style="@styleAttributeValue">
         @for (int i = 0; i < markupLines.Count; i++) {
             <span @key="markupLines[i].Id">@GetMarkup(i)</span><br /> 
         }
@@ -48,7 +48,7 @@
     }
 </div>
 <div>
-    <div id='id-@this.id.ToString()-bsta-typeahead' style='line-height: initial; position: absolute; top: @((caretData.Top)+"px"); left: @((caretData.Left)+"px")'>
+    <div id='id-@this.id.ToString()-bsta-typeahead' class="@classAttributeValue" style='line-height: initial; position: absolute; top: @((caretData.Top)+"px"); left: @((caretData.Left)+"px"); @styleAttributeValue'>
         @if (InlineTypeahead is not null)
         {
             @InlineTypeahead
