@@ -82,10 +82,6 @@
     text-shadow: 0.75px 0px 0px;
 }
 
-::deep span.b:hover, span.bold:hover { 
-    color:red;
-}
-
 ::deep span.o, span.rounded { 
     border-radius: 0.2em;
 }
