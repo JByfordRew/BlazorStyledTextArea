@@ -6,6 +6,7 @@ public partial class StyledTextArea
     private int textLength = 0;
     private int deferredCaretPosition = 0;
     private Coords caretCoords = new(0, 0);
+    private Coords wordStartCoords = new(0, 0);
     private RowCol rowCol = new(0, 0);
     private RowCol endRowCol = new(0, 0);
     private bool deferSetCaretPositionUntilRendered = false;
@@ -39,6 +40,9 @@ public partial class StyledTextArea
     {
         var coords = await jsInterop!.GetElementPosition(this.id.ToString(), MarkupLine.CursorElementId);
         caretCoords = new Coords(coords[0], coords[1]);
+        await Task.Yield(); //NOTE important to update markup with typeahead content
+        coords = await jsInterop!.GetElementPosition(this.id.ToString(), MarkupLine.TypedWordElementId);
+        wordStartCoords = new Coords(coords[0], coords[1]);
     }
 
     private async Task UpdateCaretData()
@@ -47,7 +51,8 @@ public partial class StyledTextArea
         caretPosition, textLength,
         rowCol.Row, rowCol.Col,
         caretCoords.Y, caretCoords.X,
-        text.IsAtEndOfLine(caretPosition), text.LastWordTextToCaret(caretPosition));
+        text.IsAtEndOfLine(caretPosition), text.LastWordTextToCaret(caretPosition),
+        wordStartCoords.Y, wordStartCoords.X);
 
         if (!caretData.Equals(value))
         {

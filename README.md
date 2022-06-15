@@ -70,12 +70,13 @@ dotnet add package BlazorStyledTextArea
 * `OnCaretChanged` - callback `CaretData` can provide position data useful for placing dropdowns, overlays or other UI elements relative to the caret.
 * `OnElementClicked` - callback with id and text of clicked text when using `.WithId`. Useful to capturing interactions with clickable styled text.
 * `TimeElementIsClickableInMilliseconds` - for interactive markup with Ids that are clickable, this is the time they can be clicked before returning to text editing mode (default 1200 milliseconds).
+* `class` and `style` - normal attributes but can be used to provide styling of the textarea for consistent operation.  Use if UI of StyledTextArea is not behaving as expected (prefer `class` over `style`).
+
 * `UseStandardTextarea` - true when recommended by the BlazorTextarea component documentation. 
 ### Methods
 * `InsertText` - adds text after caret position (caret moved to end of insert).
 * `ReplaceWord` - replaces word currently typed to caret position (caret moved to end of replacement).
-* `Refresh` - manually trigger a render.
-* `class` and `style` - normal attributes but can be used to provide styling of the textarea for consistent operation.  Use if UI of StyledTextArea is not behaving as expected (prefer `class` over `style`). 
+* `Refresh` - manually trigger a render. 
 
 #### The `StyleRule`
 StyleRule has a number of composable methods to apply CSS styles to matched text. Each line of text is processed by these rules. 
@@ -124,8 +125,8 @@ A common feature as users type is to provide some form of autocomplete, typeahea
   * Remember to add an onClick event handler to accept the typeahead suggestion.
 
 * `OnCaretChanged` callback with `CaretData`
-  * Contains caret index, text length, row, col, top and left position, if at end of line and word typed to caret so far.
-  * For typeahead this can be used to position any custom UI to be near the caret and also provide typed text to help derive typeahead or dropdown suggestions.
+  * Contains caret index, text length, row, col, top and left position, if at end of line and word typed to caret so far.  
+  * For typeahead this can be used to position any custom UI to be near the caret and also provide typed text to help derive typeahead or dropdown suggestions.  Also, start of word top and left to use to position custom typeahead selectors or other interactive overlays.
 
 ## Examples
 
@@ -194,8 +195,8 @@ Your razor file.
         StyleRule.Words("match is", "underline"),
 
         //interactive element, shows message when clicked when not editing.
-        StyleRule.Words("(click me)", "rounded yellow").WithId("clickable"),
-        StyleRule.Words("(or me)", "rounded yellow").WithId("clickable"),
+        StyleRule.Words("(click me)", "rounded my-yellow").WithId("clickable"),
+        StyleRule.Words("(or me)", "rounded my-yellow").WithId("clickable"),
 
         //global keyword styling example
         StyleRule.Words("StyleRule.Text", "rounded keyword"),
@@ -440,7 +441,7 @@ Your razor file.
     <CustomTypeahead>
         @if (typeaheadOptions.Any())
         {
-            <div style='position: absolute; margin-top: -0.16em; top: @((caretData!.Top+20)+"px"); left: @((caretData.Left - 12)+"px")'>
+            <div style='position: absolute; top: @((caretData!.WordTextStartTop+20)+"px"); left: @(caretData.WordTextStartLeft+"px")'>
                 <select @ref="selector" size="@typeaheadOptions.Count()" @onchange=SelectionChange @onkeydown=SelectorEnterPressed @onblur=SelectorBlur>
                     @foreach (var option in typeaheadOptions)
                     {
@@ -577,9 +578,11 @@ Your razor file.
 * Not consuming blazor components when rendering template html. 
 
 ## Version History
+* Version 0.9.2 - custom typeahead selector can now be positioned at the start of the typed word.
 * Version 0.9.1 - fix typeahead positioning. 
 * Version 0.9.0 - initial release .NET 6 component.
 
 ## Roadmap
-* Known issue: fix typeahead on mobile
-* Known issue: custom typeahead selector needs to know position at start of currently typed word as an option to position the dropdown selector at the start of the word being typed.  Currently caret position is where the caret is.
+* Improvement: match as typing work (starts with logic) i.e. 'ital' would be styled as italic but only when caret end of currently typed word.  Only applies when typing word.
+* Known issue: fix typeahead on mobile (this is a larger piece of work)
+

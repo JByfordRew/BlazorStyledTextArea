@@ -7,6 +7,8 @@ public class MarkupLine
 {
     public const string CursorElementId = $"{nameof(BlazorStyledTextArea)}Caret";
     public const string CursorPlaceholder = $"<span class='caret' style='visibility: hidden;' id='{CursorElementId}'><i></i></span>";
+    public const string TypedWordElementId = $"{nameof(BlazorStyledTextArea)}Word";
+    public const string TypedWordOpeningTag = $"<span style='white-space: nowrap; display: inline-block;' id='{TypedWordElementId}'>";
 
     public Guid Id { get; private set; }
     public string Text { get; private set; }
@@ -53,7 +55,7 @@ public class MarkupLine
         if (wordToCaret.Any())
         {
             wordStartCol = html.IndexOfTextWithMarkup(wordStartCol);
-            html = html.Insert(wordStartCol, "<span style='white-space: nowrap; display: inline-block;'>");
+            html = html.Insert(wordStartCol, TypedWordOpeningTag);
             placeholder += "</span>";
         }
         else

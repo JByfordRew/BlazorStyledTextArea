@@ -38,7 +38,7 @@ public partial class StyledTextArea
         if (content == "[custom-typeahead]")
         {
             isCustomTypeaheadSuggestion = true;
-            content = "";
+            content = ".";
         }
 
         typeaheadSuggestion = content;

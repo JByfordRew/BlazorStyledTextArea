@@ -7,20 +7,21 @@
 	<Authors>Jeremy Byford-Rew, KernowCode</Authors>
 	<RepositoryUrl>https://github.com/JByfordRew/BlazorStyledTextArea</RepositoryUrl>
 	<RepositoryType>git</RepositoryType>
-	<Version>0.9.1</Version>
+	<Version>0.9.2</Version>
 	<OutputType>Library</OutputType>
 	<IsPackable>true</IsPackable>
 	<Description>A textarea with style!</Description>
 	<PackageProjectUrl>https://github.com/JByfordRew/BlazorStyledTextArea</PackageProjectUrl>
 	<RepositoryUrl>https://github.com/JByfordRew/BlazorStyledTextArea</RepositoryUrl>
-	<PackageTags>blazor,razor,components,textarea</PackageTags>
+	<PackageTags>blazor,razor,components,textarea,css,style</PackageTags>
 	<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 	<PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
 	<PackageLicenseUrl></PackageLicenseUrl>
 	<PackageLicenseExpression>MIT</PackageLicenseExpression>
 	<Company>Jeremy Byford-Rew, KernowCode</Company>
 	<AddRazorSupportForMvc>true</AddRazorSupportForMvc>
-	<PackageReleaseNotes>V0.9.1 fix typeahead positioning.
+	<PackageReleaseNotes>V0.9.2 custom typeahead selector can now be positioned at the start of the typed word.
+V0.9.1 fix typeahead positioning.
 V0.9.0 initial release, see repo for guidance.</PackageReleaseNotes>
   </PropertyGroup>
 

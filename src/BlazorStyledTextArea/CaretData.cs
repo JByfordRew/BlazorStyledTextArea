@@ -8,7 +8,8 @@ public class CaretData
         int row, int col, 
         decimal top, decimal left,
         bool atEndOfLine,
-        string wordTextToCaret)
+        string wordTextToCaret,
+        decimal wordTextStartTop, decimal wordTextStartLeft)
     {
         Index = index;
         Length = length;
@@ -18,6 +19,8 @@ public class CaretData
         Left = left;
         AtEndOfLine = atEndOfLine;
         WordTextToCaret = wordTextToCaret;
+        WordTextStartTop = wordTextStartTop;
+        WordTextStartLeft = wordTextStartLeft;
     }
 
     /// <summary>
@@ -59,6 +62,17 @@ public class CaretData
     /// The text of the word leading up to the caret position.
     /// </summary>
     public string WordTextToCaret { get; }
+
+    /// <summary>
+    /// The 'top' (y) pixel value on the page where the start of the currently typed work is positioned.
+    /// </summary>
+    public decimal WordTextStartTop { get; }
+
+    /// <summary>
+    /// The 'left' (x) pixel value on the page where the start of the currently typed work is positioned.
+    /// </summary>
+    public decimal WordTextStartLeft { get; }
+
 
     public bool Equals(CaretData? other)
     {

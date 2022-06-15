@@ -66,7 +66,7 @@ public partial class StyledTextArea
     [Parameter]
     public List<StyleRule> StyleRules { get; set; } = new List<StyleRule>();
 
-    private CaretData caretData = new(0, 0, 0, 0, 0, 0, false, "");
+    private CaretData caretData = new(0, 0, 0, 0, 0, 0, false, "", 0, 0);
 
     /// <summary>
     /// Get updates to caret data including text index and length, row and column, x and y pixel coords, is caret at end of line and word typed to caret.
