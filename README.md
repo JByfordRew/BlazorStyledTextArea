@@ -583,6 +583,5 @@ Your razor file.
 * Version 0.9.0 - initial release .NET 6 component.
 
 ## Roadmap
-* Improvement: match as typing work (starts with logic) i.e. 'ital' would be styled as italic but only when caret end of currently typed word.  Only applies when typing word.
 * Known issue: fix typeahead on mobile (this is a larger piece of work)
-
+* Improvement: match as typing word (starts with logic) i.e. 'ital' would be styled as italic but only when caret end of currently typed word.  Only applies when typing word. This may take a while to implement.
