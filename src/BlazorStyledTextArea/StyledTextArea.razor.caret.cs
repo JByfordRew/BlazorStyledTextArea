@@ -40,7 +40,6 @@ public partial class StyledTextArea
     {
         var coords = await jsInterop!.GetElementPosition(this.id.ToString(), MarkupLine.CursorElementId);
         caretCoords = new Coords(coords[0], coords[1]);
-        await Task.Yield(); //NOTE important to update markup with typeahead content
         coords = await jsInterop!.GetElementPosition(this.id.ToString(), MarkupLine.TypedWordElementId);
         wordStartCoords = new Coords(coords[0], coords[1]);
     }

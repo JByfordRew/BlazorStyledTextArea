@@ -11,7 +11,7 @@
     <CustomTypeahead>
         @if (typeaheadOptions.Any())
         {
-            <div style='position: absolute; top: @((caretData!.WordTextStartTop+20)+"px"); left: @(caretData.WordTextStartLeft+"px")'>
+            <div style='position: absolute; top: @((caretData!.WordTextStartTop+20)+"px"); left: @((caretData.WordTextStartLeft-3)+"px")'>
                 <select @ref="selector" size="@typeaheadOptions.Count()" @onchange=SelectionChange @onkeydown=SelectorEnterPressed @onblur=SelectorBlur>
                     @foreach (var option in typeaheadOptions)
                     {

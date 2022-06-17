@@ -573,11 +573,13 @@ Your razor file.
 * Server-side blazor 'Connection disconnected' issue regarding SignalR Hub `MaximumReceiveMessageSize` default value.  Changing this value will resolve this issue but this component uses `BlazorTextarea` which has inbuilt batching design to overcome this specific issue.  See [here](https://github.com/JByfordRew/BlazorTextarea#server-side-blazor-connection-disconnected-issue)
   * At this time it is recommended to set `UseStandardTextarea` to `true` and set `MaximumReceiveMessageSize` to `null` for reliable user experience and no real performance improvement gained.
 ### Component
+* As a textarea the font size cannot be different within the textarea.
 * Currently limited to only left to right text direction.
 * Line endings need to be consistent so recommended to use `StyledTextArea.PrepareText` when setting the bound text value. 
 * Not consuming blazor components when rendering template html. 
 
 ## Version History
+* Version 0.9.3 - smooth typeahead reinstated.
 * Version 0.9.2 - custom typeahead selector can now be positioned at the start of the typed word.
 * Version 0.9.1 - fix typeahead positioning. 
 * Version 0.9.0 - initial release .NET 6 component.
