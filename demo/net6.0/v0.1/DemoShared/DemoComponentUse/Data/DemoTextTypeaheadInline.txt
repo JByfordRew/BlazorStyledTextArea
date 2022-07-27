@@ -1,3 +1,0 @@
-﻿Typeahead Features (Inlined)
-The component also can help with inline typeahead suggestions.  
-Try typing the fruit names; apple, banana, pineapple to see the inline suggestions take affect.

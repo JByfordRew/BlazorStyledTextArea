@@ -1,8 +1,0 @@
-﻿Styles and templates
-*  Using StyleRule.Text or StyleRule.Words you can specify styles to be applied when any text or words are matched.
-*  There are inbuilt styles provided; bold, italic, underline, strikethrough, rounded and replace. For bold, use the inbuilt style as it does not affect text layout.  Replace can be seen here replacing asterisk for bullet points.  You are also free to use your own styles.
-*  Styles will be applied globally wherever they match unless you provide the .OnLine option, as seen here where `Styles and templates` is only styled on the first line.
-*  Styles can be nested where the largest match is styled first.
-*  Text can be be made clickable if given an id via .WithId and the OnElementClicked event callback providing id and matched text (click me) (or me).  Clickable for just over a second before returning to be editable.
-*  You can use standard HTML to apply templates, via .HtmlTemplate, and use the StyleRule.MatchMarker anywhere in your template to place the matched text.  Adding the .WithId will also allow the HTML to be clickable as shown here with this custom github.com link.
-*  Other options include .AtInstance which matches a specific instance and .AtStartOfLine only matches when no preceding line text, as seen here with the bullet points.

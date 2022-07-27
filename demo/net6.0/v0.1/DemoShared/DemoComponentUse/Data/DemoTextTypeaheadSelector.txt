@@ -1,3 +1,0 @@
-﻿Typeahead Features (selector)
-The component also can help with typeahead suggestions using overlayed selector integration.  
-Try typing the fruit names; apple, banana, pineapple to see selector appear.  Try CTRL+DOWN to move to the selector to choose a suggestion or click on an option.

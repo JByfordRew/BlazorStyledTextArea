@@ -1,0 +1,122 @@
+@import '_content/BlazorStyledTextArea/BlazorStyledTextArea.bundle.scp.css';
+
+/* _content/DemoComponentUse/Demo/DemoChangedLinesUsage.razor.rz.scp.css */
+[b-48mbik7dna] .background-plum {
+    background-color: plum;
+}
+
+[b-48mbik7dna] .code {
+    background-color: #f2f2f2;
+    outline: 1px solid #d9d9d9;
+    color: indianred;
+}
+/* _content/DemoComponentUse/Demo/DemoStyleUsage.razor.rz.scp.css */
+[b-8hwohny4me] .background-plum {
+    background-color: plum;
+}
+
+[b-8hwohny4me] .code {
+    background-color: #f2f2f2;
+    outline: 1px solid #d9d9d9;
+    color: indianred;
+}
+/* _content/DemoComponentUse/Demo/DemoTypeaheadUsageInline.razor.rz.scp.css */
+[b-6gy1f5g4ls] .background-plum {
+    background-color: plum;
+}
+
+[b-6gy1f5g4ls] .code {
+    background-color: #f2f2f2;
+    outline: 1px solid #d9d9d9;
+    color: indianred;
+}
+/* _content/DemoComponentUse/Demo/DemoTypeaheadUsageSelector.razor.rz.scp.css */
+[b-048fi8ako0] .background-plum {
+    background-color: plum;
+}
+
+[b-048fi8ako0] .code {
+    background-color: #f2f2f2;
+    outline: 1px solid #d9d9d9;
+    color: indianred;
+}
+/* _content/DemoComponentUse/Tests/TestCombinedGlobalAndOnLineMatch.razor.rz.scp.css */
+[b-csirbdkc48] .background-plum {
+    background-color: plum;
+}
+
+[b-csirbdkc48] .code {
+    background-color: #f2f2f2;
+    outline: 1px solid #d9d9d9;
+    color: indianred;
+}
+/* _content/DemoComponentUse/Tests/TestHtmlTemplateStyled.razor.rz.scp.css */
+[b-plg57rr6ab] .background-plum {
+    background-color: plum;
+}
+
+[b-plg57rr6ab] .code {
+    background-color: #f2f2f2;
+    outline: 1px solid #d9d9d9;
+    color: indianred;
+}
+/* _content/DemoComponentUse/Tests/TestSingleCharMatching.razor.rz.scp.css */
+[b-km603bv651] .background-plum {
+    background-color: plum;
+}
+
+[b-km603bv651] .code {
+    background-color: #f2f2f2;
+    outline: 1px solid #d9d9d9;
+    color: indianred;
+}
+/* _content/DemoComponentUse/Tests/TestStartOfLineMatching.razor.rz.scp.css */
+[b-ruantq4fcl] .background-plum {
+    background-color: plum;
+}
+
+[b-ruantq4fcl] .code {
+    background-color: #f2f2f2;
+    outline: 1px solid #d9d9d9;
+    color: indianred;
+}
+/* _content/DemoComponentUse/Tests/TestTextOfSameCharMatchingWhenSequentialText.razor.rz.scp.css */
+[b-9nok7bml56] .background-plum {
+    background-color: plum;
+}
+
+[b-9nok7bml56] .code {
+    background-color: #f2f2f2;
+    outline: 1px solid #d9d9d9;
+    color: indianred;
+}
+/* _content/DemoComponentUse/Tests/TestTextSelection.razor.rz.scp.css */
+[b-lo3oo5nbto] .background-plum {
+    background-color: plum;
+}
+
+[b-lo3oo5nbto] .code {
+    background-color: #f2f2f2;
+    outline: 1px solid #d9d9d9;
+    color: indianred;
+}
+/* _content/DemoComponentUse/Tests/TestTextToCaret.razor.rz.scp.css */
+[b-g4p31f7cep] .background-plum {
+    background-color: plum;
+}
+
+[b-g4p31f7cep] .code {
+    background-color: #f2f2f2;
+    outline: 1px solid #d9d9d9;
+    color: indianred;
+}
+/* _content/DemoComponentUse/Tests/TestWholeLineMatch.razor.rz.scp.css */
+[b-4qe5qashog] .background-plum {
+    background-color: plum;
+}
+
+[b-4qe5qashog] .code {
+    background-color: #f2f2f2;
+    outline: 1px solid #d9d9d9;
+    color: indianred;
+}

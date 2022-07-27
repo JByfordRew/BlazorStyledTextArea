@@ -1,0 +1,132 @@
+/* _content/BlazorStyledTextArea/StyledTextArea.razor.rz.scp.css */
+.textarea-container[b-ne97h2n3pe] {
+    display: grid;
+    word-break: break-all;
+}
+
+[b-ne97h2n3pe] .just-content {
+    resize: none;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    -webkit-font-smoothing: antialiased;
+    background-color: transparent;
+    word-break: break-word;
+    white-space: pre-wrap;
+    padding: 0px;
+}
+
+[b-ne97h2n3pe] .overlayed {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+[b-ne97h2n3pe] .hidden-text {
+    -webkit-text-fill-color: transparent;
+}
+
+[b-ne97h2n3pe] .hidden-caret {
+    color: transparent;
+    text-shadow: 0 0 0;
+}
+
+[b-ne97h2n3pe] .caret {
+	position: relative;
+}
+
+[b-ne97h2n3pe] .caret i {
+	position: absolute;
+	width: 1.25px;
+	height: 100%;
+	background-color: black;
+	top: 0%;
+	animation-name: blink-b-ne97h2n3pe;
+	animation-duration: 1050ms;
+	animation-iteration-count: infinite;
+	opacity: 1;
+    visibility: visible;
+}
+
+@keyframes blink-b-ne97h2n3pe {
+	0% { opacity: 1; }
+    10% { opacity: 1; }
+    20% { opacity: 1; }
+    30% { opacity: 1; }
+    40% { opacity: 1; }
+    50% { opacity: 0; }
+    60% { opacity: 0; }
+    70% { opacity: 0; }
+    80% { opacity: 0; }
+    90% { opacity: 0; }	    	
+    100% { opacity: 1; }	  
+}
+
+[b-ne97h2n3pe] .no-interaction {
+    pointer-events: none;
+}
+
+[b-ne97h2n3pe] span {
+    white-space: pre-wrap;
+}
+
+[b-ne97h2n3pe] .p { /*hand pointer*/
+    cursor: pointer;
+}
+
+[b-ne97h2n3pe] .x { /*interaction*/
+    pointer-events: auto;
+}
+
+[b-ne97h2n3pe] span.b, span.bold[b-ne97h2n3pe] { 
+    text-shadow: 0.75px 0px 0px;
+}
+
+[b-ne97h2n3pe] span.o, span.rounded[b-ne97h2n3pe] { 
+    border-radius: 0.2em;
+}
+
+[b-ne97h2n3pe] span.u, span.underline[b-ne97h2n3pe] { 
+    text-decoration: underline;
+}
+
+[b-ne97h2n3pe] span.s, span.strikethrough[b-ne97h2n3pe] {
+    text-decoration: line-through;
+}
+
+[b-ne97h2n3pe] span.r, span.replace[b-ne97h2n3pe] { 
+    color: transparent;
+    position: relative;
+}
+
+[b-ne97h2n3pe] span.r:after, span.replace[b-ne97h2n3pe]:after { 
+    pointer-events: none;
+    content: attr(data-v);
+    color: initial; 
+    position: absolute;
+    left: 0px; 
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+[b-ne97h2n3pe] span.i, span.italic[b-ne97h2n3pe] {
+    font-style: italic;
+    letter-spacing: -0.000em; /*NOTE used to be -0.01em now does not have an effect*/
+}
+
+/*::deep span.i, span.italic { 
+    color: transparent;
+    position: relative;
+}
+
+::deep span.i:after, span.italic:after {
+    pointer-events: none;
+    font-style: italic;
+    letter-spacing: -0.01em;
+    content: attr(data-v);
+    color: initial;
+    position: absolute;
+    left: 0px;
+    white-space: nowrap;
+}*/

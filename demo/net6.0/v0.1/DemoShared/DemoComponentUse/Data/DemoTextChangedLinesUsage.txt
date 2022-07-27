@@ -1,5 +1,0 @@
-﻿Maintaining Style Rules
-Sometimes text needs to be styled contextually only on specific lines, depending on your apps requirements.
-Here we will show, as an example, the common @name syntax as used in Twitter, Slack and other platforms.  
-As you type and add and remove lines, copy and paste text you will see these occurrences automatically have their specific recorded line numbers updated and also your code will be notified of any occurrences that no longer match for their specific line. 
-This allows you to reprocess them individually or on mass by their named type.  Try modifying this text in various ways!
