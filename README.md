@@ -13,7 +13,7 @@ It does not provide the full support of markup editing and user interaction that
 
 ![Demo](demo/assets/BlazorStyledTextAreaMainDemo.gif)
 
-[Online Demo](https://salmon-grass-0281f5503.1.azurestaticapps.net/)
+[Online Demo](https://jbyfordrew.github.io/BlazorStyledTextArea/)
 
 ## Feature Summary
 * Simple to use 
@@ -587,5 +587,3 @@ Your razor file.
 ## Roadmap
 * Known issue: fix typeahead on mobile (this is a larger piece of work)
 * Improvement: match as typing word (starts with logic) i.e. 'ital' would be styled as italic but only when caret end of currently typed word.  Only applies when typing word. This may take a while to implement.
-
-
